@@ -1,0 +1,43 @@
+/*Common & plugins*/
+@import "variables.scss";
+
+//@import '~bootstrap/scss/bootstrap.scss'; /*<-- All bootstrap styles*/
+//Bootstrap grid
+@import "~bootstrap/scss/_functions.scss";
+@import "~bootstrap/scss/_variables.scss";
+@import "~bootstrap/scss/_mixins.scss";
+@import "~bootstrap/scss/_grid.scss";
+
+//Reset
+@import "~reset-css/sass/_reset.scss";
+
+//Fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@500;600;700&display=swap');
+
+/*Partials*/
+@import './partials/header';
+
+
+html{
+
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1{
+  
+  font-size: 45px;
+  line-height: 133%;
+  font-weight: 600;
+  text-transform: lowercase;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+
+  &::first-letter{
+    text-transform: uppercase;
+  }
+
+  span{
+    font-weight: 700;
+    color: $green;
+  }
+}
+
