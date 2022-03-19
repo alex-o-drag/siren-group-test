@@ -1,0 +1,36 @@
+.hero{
+
+  padding: 50px 0 45px;
+}
+
+.hero__title{
+
+  margin-bottom: 47px;
+  font-size: 45px;
+  line-height: 133%;
+  font-weight: 600;
+  text-transform: lowercase;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+
+  &::first-letter{
+
+    text-transform: uppercase;
+  }
+
+  span{
+
+    font-weight: 700;
+    color: $green;
+  }
+}
+
+.hero__row{
+
+  @include make-row(20px);
+}
+
+.hero__col{
+
+  @include make-col-ready(20px);
+  margin-bottom: 15px;
+}

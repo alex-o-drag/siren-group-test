@@ -3,10 +3,7 @@
 
 //@import '~bootstrap/scss/bootstrap.scss'; /*<-- All bootstrap styles*/
 //Bootstrap grid
-@import "~bootstrap/scss/_functions.scss";
-@import "~bootstrap/scss/_variables.scss";
-@import "~bootstrap/scss/_mixins.scss";
-@import "~bootstrap/scss/_grid.scss";
+@import "~bootstrap/scss/bootstrap-grid.scss";
 
 //Reset
 @import "~reset-css/sass/_reset.scss";
@@ -16,28 +13,14 @@
 
 /*Partials*/
 @import './partials/header';
+@import './partials/hero';
+@import './partials/faq';
+
+/*Blocks*/
+@import "./blocks/featureCard";
+@import "./blocks/logoSvg";
 
 
 html{
-
   font-family: 'Montserrat', sans-serif;
 }
-
-h1{
-  
-  font-size: 45px;
-  line-height: 133%;
-  font-weight: 600;
-  text-transform: lowercase;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
-
-  &::first-letter{
-    text-transform: uppercase;
-  }
-
-  span{
-    font-weight: 700;
-    color: $green;
-  }
-}
-

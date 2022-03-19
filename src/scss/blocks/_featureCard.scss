@@ -1,0 +1,25 @@
+.featureCard{
+
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 18px 30px;
+  background-color: $lightGrey_2;
+
+  img{
+
+    display: block;
+    width: 70px;
+    margin-bottom: 15px;
+  }
+
+  h2{
+
+    font-size: 21px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 130%;
+    
+  }
+}

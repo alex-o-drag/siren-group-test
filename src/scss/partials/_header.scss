@@ -12,9 +12,12 @@
 }
 
 .header__logo-link{
+
+  display: block;
   width: 168px;
   
-  &, &>img{
-    display: block;
+  svg{
+    width: 100%;
+
   }
 }

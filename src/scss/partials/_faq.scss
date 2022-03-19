@@ -1,0 +1,60 @@
+.faq{
+
+  padding: 60px 0 20px;
+  background-color: $lightGrey_2;
+}
+
+
+.faq__row{
+
+  margin-bottom: 40px;
+
+  &:nth-child(even){
+    flex-direction: row-reverse;
+  }
+}
+
+
+.faq__textBlock{
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h2{
+    
+    margin-bottom: 15px;
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 1.33;
+  }
+
+  p{
+
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.44;
+  }
+}
+
+.faq__imgWrap{
+  
+  position: relative;
+
+  img{
+
+    display: block;
+
+    &:not(.faq__additionalImg){
+
+      border-radius: 8px;
+    }
+  }
+}
+
+.faq__additionalImg{
+  
+  position: absolute;
+  top: -20px;
+  right: -20px;
+}
