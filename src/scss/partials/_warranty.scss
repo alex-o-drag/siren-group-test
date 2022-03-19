@@ -1,0 +1,52 @@
+.warranty{
+
+  margin-bottom: 60px;
+}
+
+.warranty__main{
+  background-color: $lightGrey_3;
+  margin-bottom: 60px;
+}
+
+.warranty__row{
+
+  align-items: center;
+}
+
+.warranty__imgCol{
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  img{
+
+    display: block;
+    width: 236px;
+    transform-origin: center center;
+    transform: scale(1.1);
+  }
+}
+
+.warranty__textCol{
+  
+  flex-grow: 1;
+  
+  h2{
+    
+    margin-bottom: 15px;  
+
+    span{
+      color: $green;
+    }
+  }
+
+  p{
+
+    padding-right: 15px;
+  }
+}
+
+.warranty__notice{
+  text-align: center;
+}

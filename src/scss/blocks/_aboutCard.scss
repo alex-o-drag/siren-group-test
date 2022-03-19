@@ -1,0 +1,27 @@
+.aboutCard{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  height: 100%;
+  background-color: $green;
+  border-radius: 8px;
+}
+
+.aboutCard__imgWrap{
+
+  border-radius: 8px;
+  overflow: hidden;
+
+  img{
+    display: block;
+  }
+}
+
+.aboutCard__text{
+
+  margin: auto;
+  padding: 15px;
+  text-align: center;
+  color: $white;
+}

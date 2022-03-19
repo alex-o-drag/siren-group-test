@@ -1,20 +1,34 @@
 .logoSvg{
 
   display: block;
+  width: 168px;
+
 }
 
 .logoSvg__text{
+
   fill: $white;
 }
 
 .logoSvg__bg{
+
   fill: $green;
 }
 
 .logoSvg__squire{
+
   fill: $white;
 }
 
 .logoSvg__border{
+
   fill: $green;
+
+  &_white{
+    fill: $white;
+  }
+}
+
+.logoSvg__rect{
+    stroke: $white;
 }

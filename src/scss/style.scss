@@ -8,6 +8,9 @@
 //Reset
 @import "~reset-css/sass/_reset.scss";
 
+//Typography
+@import './typography';
+
 //Fonts
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@500;600;700&display=swap');
 
@@ -15,12 +18,11 @@
 @import './partials/header';
 @import './partials/hero';
 @import './partials/faq';
+@import './partials/about';
+@import './partials/warranty';
+@import './partials/footer';
 
 /*Blocks*/
 @import "./blocks/featureCard";
 @import "./blocks/logoSvg";
-
-
-html{
-  font-family: 'Montserrat', sans-serif;
-}
+@import "./blocks/aboutCard";
