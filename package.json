@@ -29,6 +29,7 @@
     "reset-css": "^5.0.1"
   },
   "devDependencies": {
+    "gulp-purgecss": "^4.1.3",
     "node-sass-tilde-importer": "^1.0.2",
     "sass": "^1.49.9"
   }

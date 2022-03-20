@@ -6,7 +6,6 @@
   @include media-breakpoint-down(md){
     
     padding: 35px 0 5px;
-    background-color: $white;
   }
 }
 
@@ -32,7 +31,24 @@
 
 .faq__imgWrap{
 
+  @extend .overflow-hidden;
+  @extend .rounded;
+  padding-bottom: 55.55556%;
   font-size: 0;
+  height: 0;
+
+  img{
+    
+    @extend .w-100;
+    @extend .rounded;
+    @extend .position-absolute;
+    @extend .overflow-hidden;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+  }
 }
 
 .faq__textBlock{

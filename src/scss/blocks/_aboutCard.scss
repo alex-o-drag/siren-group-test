@@ -9,12 +9,24 @@
 }
 
 .aboutCard__imgWrap{
+  
+  @extend .rounded;
+  @extend .overflow-hidden;
+  @extend .position-relative;
 
-  border-radius: 8px;
-  overflow: hidden;
+  height: 0;
+  padding-bottom: 49.41%;
 
   img{
-    display: block;
+    
+    @extend .position-absolute;
+    @extend .w-100;
+    @extend .rounded;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0;
   }
 }
 

@@ -5,6 +5,7 @@ const cssnano = require('cssnano');
 const terser = require('gulp-terser');
 const browserSync = require('browser-sync').create();
 const tildeImporter = require('node-sass-tilde-importer');
+const purgecss = require('gulp-purgecss')
 
 //Sass
 function scssTask(){
@@ -37,9 +38,25 @@ function watchTask(cb){
   watch(['src/scss/**/*.scss'], series(scssTask, browseryncReload));
 }
 
+//Purge
+/* gulp.task('purgecss', () => {
+  
+}) */
+
+function purge(){
+  return src('assets/style.css')
+      .pipe(purgecss({
+          content: ['index.html']
+      }))
+      .pipe(dest('assets'))
+}
+
+
 //Default
 exports.default = series(
   scssTask,
   browseryncServe,
   watchTask
 )
+
+exports.purge = purge;

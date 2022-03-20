@@ -9,10 +9,13 @@
 
 
 
-
+/*Bootstrap*/
 //@import '~bootstrap/scss/bootstrap.scss'; /*<-- All bootstrap styles*/
-//Bootstrap grid
+
+//Grid
 @import "~bootstrap/scss/bootstrap-grid.scss";
+
+//Utilities
 @import "~bootstrap/scss/_functions.scss";
 @import "~bootstrap/scss/_mixins.scss";
 @import "~bootstrap/scss/_variables.scss";
@@ -33,10 +36,3 @@
 @import './partials/about';
 @import './partials/warranty';
 @import './partials/footer';
-
-
-
-
-html{
-  //font-size: 5px;
-}
