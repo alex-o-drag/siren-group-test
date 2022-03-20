@@ -1,6 +1,10 @@
 .about{
 
   padding: 60px 0 30px;
+
+  @include media-breakpoint-down(lg){
+    padding: 35px 0 15px;
+  }
 }
 
 .aobut__title {

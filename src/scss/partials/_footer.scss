@@ -4,37 +4,51 @@
   background-color: $green;
 }
 
-.footer__row{
-  align-items: center;
-}
-
 .footer__logoLink{
   
+  
   font-size: 0;
+
+  @include media-breakpoint-down(md){
+    
+    margin-bottom: 25px;
+  }
 }
 
-.footer__navCol{
-  margin: 0 auto;
+.footer__logoSvg{
+
+  @include media-breakpoint-down(lg){
+    max-width: 150px;
+  }
 }
 
 .footer__copy{
 
+  margin-top: 10px;
+  margin-right: auto;
   font-size: 12px;
   color: $white;
   line-height: 1.5;
-  margin-right: auto;
-
 }
 
 .footer__navRow{
 
-  display: flex;
-  justify-content: center;
   font-size: 14px;
 
-  li:not(:last-child){
+  li{
     
-    margin-right: 30px;
+    &:not(:last-child){
+      
+      margin-right: 30px;
+
+      @include media-breakpoint-down(sm){
+        margin-right: 0;
+      }
+    }
+
+    @include media-breakpoint-down(sm){
+      margin-bottom: 15px;
+    }
   }
 
   a{

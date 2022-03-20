@@ -1,25 +1,51 @@
 .featureCard{
 
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-  align-items: center;
   padding: 30px 18px 30px;
   background-color: $lightGrey_2;
 
+  @extend .d-flex;
+  @extend .flex-column;
+  @extend .align-items-center;
+  @extend .h-100;
+  @extend .rounded;
+
   img{
 
-    display: block;
     width: 70px;
     margin-bottom: 15px;
   }
 
   h2{
-
-    font-size: 21px;
-    font-weight: 500;
-    text-align: center;
-    line-height: 130%;
     
+    font-size: 21px;
+    line-height: 1.3;
+    max-width: 100%;
+  }
+
+  @include media-breakpoint-down(sm){
+    
+    padding: 20px 16px;
+    //border-radius: 8px;
+
+    img{
+
+      width: 60px;
+    }
+
+    h2{
+      
+      font-size: 16px;
+    }
+  }
+}
+
+
+.featureCard__mobileWord{
+
+  text-transform: capitalize;
+
+  @include media-breakpoint-down(md){
+
+    text-transform: lowercase;
   }
 }

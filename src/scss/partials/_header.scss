@@ -1,23 +1,16 @@
 
 .header{
   
-  padding: 21px 0;
+  padding: 20px 0;
   border-bottom: 1px solid $lightGrey_1;
   
-  .container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  @include media-breakpoint-down(md){
+    
+    padding: 15px 0;
   }
-}
-Z
-.header__logo-link{
 
-  display: block;
-  width: 168px;
-  
-  svg{
-    width: 100%;
-
+  @include media-breakpoint-down(sm){
+    
+    padding: 10px 0;
   }
 }

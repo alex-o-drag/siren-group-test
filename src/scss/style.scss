@@ -1,18 +1,30 @@
 /*Common & plugins*/
 @import "variables.scss";
 
+/*Reset*/
+@import "~reset-css/sass/_reset.scss";
+
+/*Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@500;600;700&display=swap');
+
+
+
+
 //@import '~bootstrap/scss/bootstrap.scss'; /*<-- All bootstrap styles*/
 //Bootstrap grid
 @import "~bootstrap/scss/bootstrap-grid.scss";
+@import "~bootstrap/scss/_functions.scss";
+@import "~bootstrap/scss/_mixins.scss";
+@import "~bootstrap/scss/_variables.scss";
+@import "~bootstrap/scss/utilities.scss";
 
-//Reset
-@import "~reset-css/sass/_reset.scss";
-
-//Typography
+/*Typography*/
 @import './typography';
 
-//Fonts
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@500;600;700&display=swap');
+/*Blocks*/
+@import "./blocks/featureCard";
+@import "./blocks/logoSvg";
+@import "./blocks/aboutCard";
 
 /*Partials*/
 @import './partials/header';
@@ -22,7 +34,9 @@
 @import './partials/warranty';
 @import './partials/footer';
 
-/*Blocks*/
-@import "./blocks/featureCard";
-@import "./blocks/logoSvg";
-@import "./blocks/aboutCard";
+
+
+
+html{
+  //font-size: 5px;
+}

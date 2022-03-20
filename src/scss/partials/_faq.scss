@@ -2,59 +2,66 @@
 
   padding: 60px 0 20px;
   background-color: $lightGrey_2;
-}
 
+  @include media-breakpoint-down(md){
+    
+    padding: 35px 0 5px;
+    background-color: $white;
+  }
+}
 
 .faq__row{
 
   margin-bottom: 40px;
 
   &:nth-child(even){
-    flex-direction: row-reverse;
-  }
-}
-
-
-.faq__textBlock{
-  
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  h2{
     
-    margin-bottom: 15px;
-    font-size: 27px;
-    font-weight: 700;
-    line-height: 1.33;
+    flex-direction: row-reverse;
+
+    @include media-breakpoint-down(sm){
+
+      flex-direction: row;
+    }
   }
 
-  p{
+  @include media-breakpoint-down(sm){
 
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 1.44;
+    margin-bottom: 30px;
   }
 }
 
 .faq__imgWrap{
+
+  font-size: 0;
+}
+
+.faq__textBlock{
   
-  position: relative;
+  @extend .d-flex;
+  @extend .flex-column;
+  @extend .justify-content-center;
 
-  img{
+  h2{
+    
+    margin-bottom: 15px;
+  }
 
-    display: block;
+  p{
 
-    &:not(.faq__additionalImg){
-
-      border-radius: 8px;
+    @include media-breakpoint-down(md){
+      margin-bottom: 20px;
     }
   }
 }
 
 .faq__additionalImg{
   
-  position: absolute;
+  width: 240px;
   top: -20px;
   right: -20px;
+
+  @include media-breakpoint-down(md){
+    top: 10px;
+    right: 10px;
+  }
 }
