@@ -1,7 +1,9 @@
 .header{
   
   padding: 20px 0;
-  border-bottom: 1px solid $lightGrey_1;
+  z-index: 9999;
+  background-color: transparentize($white, $amount: .02);
+  top: 0;
   
   @include media-breakpoint-down(md){
     
@@ -12,4 +14,8 @@
     
     padding: 10px 0;
   }
+}
+
+.header__logo-link{
+  font-size: 0;
 }

@@ -9,14 +9,20 @@ const purgecss = require('gulp-purgecss')
 
 //Sass
 function scssTask(){
-  return src('src/scss/style.scss', {sourcemap: true})
+  return src('src/scss/style.scss', {sourcemaps: true})
     .pipe(sass({importer: tildeImporter}))
     .pipe(postcss([cssnano()]))
-    .pipe(dest('assets', {sourcemap: '.'}))
+    .pipe(dest('assets'), {sourcemaps: '.'});
 }
 
+//JS
+function jsTask(){
+  return src('src/js/script.js', {sourcemaps: true})
+    .pipe(terser())
+    .pipe(dest('assets'), {sourcemaps: '.'});
+}
 
-//Browser Sync Serve
+//BrowserSync Serve
 function browseryncServe(cb){
   browserSync.init({
     server: {
@@ -35,14 +41,10 @@ function browseryncReload(cb){
 //Watch
 function watchTask(cb){
   watch('*.html', browseryncReload);
-  watch(['src/scss/**/*.scss'], series(scssTask, browseryncReload));
+  watch(['src/scss/**/*.scss', 'src/js/script.js'], series(scssTask, jsTask, browseryncReload));
 }
 
 //Purge
-/* gulp.task('purgecss', () => {
-  
-}) */
-
 function purge(){
   return src('assets/style.css')
       .pipe(purgecss({
@@ -52,9 +54,10 @@ function purge(){
 }
 
 
-//Default
+//Tasks
 exports.default = series(
   scssTask,
+  jsTask,
   browseryncServe,
   watchTask
 )

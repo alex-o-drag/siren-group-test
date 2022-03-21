@@ -1,13 +1,19 @@
 .featureCard{
 
   padding: 30px 18px 30px;
-  background-color: $lightGrey_2;
+  background-color: $light-grey-2;
+  
 
   @extend .d-flex;
   @extend .flex-column;
   @extend .align-items-center;
   @extend .h-100;
-  @extend .rounded;
+
+  
+
+  @include media-breakpoint-down(sm){
+    border-radius: $border-radius;
+  }
 
   img{
 
