@@ -15,3 +15,26 @@ function makeStikyHeader(){
 
   window.addEventListener(event, makeStikyHeader);
 });
+
+
+/*Lazy gifs*/
+
+let gifs = document.querySelectorAll('img[loading]');
+let newImg = null;
+
+
+function setGifs(){
+  
+  gifs.forEach((img) => {
+
+    newImg = new Image();
+    newImg.src = img.src.replace('jpg', 'gif')
+    img.src = newImg.src
+  });
+  
+  newImg = null;
+}
+
+window.addEventListener('load', setGifs)
+
+
