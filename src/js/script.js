@@ -1,4 +1,4 @@
-"use strict"
+'use strict'
 
 /*Sticky header*/
 
@@ -11,30 +11,23 @@ function makeStikyHeader(){
   body.style.paddingTop = header.clientHeight+'px';
 }
 
-['resize', 'load'].forEach((event) => {
+let headerPosEvents = ['resize', 'load']
 
-  window.addEventListener(event, makeStikyHeader);
-});
+for(let i = 0; i < headerPosEvents.length; i++){
 
+  window.addEventListener(headerPosEvents[i], makeStikyHeader);
+}
 
 /*Lazy gifs*/
 
 let gifs = document.querySelectorAll('img[loading]');
 let newImg = null;
 
-
-function setGifs(){
+for(let i = 0; i < gifs.length; i++){
   
-  gifs.forEach((img) => {
-
-    newImg = new Image();
-    newImg.src = img.src.replace('jpg', 'gif')
-    img.src = newImg.src
-  });
-  
-  newImg = null;
+  newImg = new Image();
+  newImg.src = gifs[i].src.replace('jpg', 'gif')
+  gifs[i].src = newImg.src
 }
-
-window.addEventListener('load', setGifs)
 
 
